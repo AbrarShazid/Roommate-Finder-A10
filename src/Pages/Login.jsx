@@ -1,11 +1,11 @@
-import React, { useState, use } from "react";
+import React, {  use } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Login = () => {
-  const [error, setError] = useState("");
+ 
   const { logIn, logInGoogle } = use(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
@@ -13,7 +13,7 @@ const Login = () => {
   const handleLogin = (e) => {
 
     e.preventDefault();
-    console.log("fuck log in");
+    
     
     const email = e.target.email.value;
     const password = e.target.password.value;
@@ -25,7 +25,7 @@ const Login = () => {
         navigate(location.state || "/");
       })
       .catch((err) => {
-        setError("Invalid email or password.");
+       
         toast.error(err.message);
       });
   };
@@ -75,7 +75,7 @@ const Login = () => {
             />
           </div>
 
-          {error && <p className="text-red-500 text-sm">{error}</p>}
+        
 
           <div className="text-sm text-gray-600 text-right">
             

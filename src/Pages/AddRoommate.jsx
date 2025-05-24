@@ -14,7 +14,6 @@ const AddRoommate = () => {
     newRoommate.lifestyle = formData.getAll("lifestyle");
      newRoommate.email = user?.email
 
-    console.log(newRoommate);
 
     // sending to db
 
@@ -27,7 +26,7 @@ const AddRoommate = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
+       
         Swal.fire({
           position: "center",
           icon: "success",
