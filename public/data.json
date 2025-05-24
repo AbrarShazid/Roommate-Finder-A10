@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Find Your Perfect Roommate",
+    "description": "Connect with compatible roommates based on your location and lifestyle.",
+    "bgFrom": "#f2555d",
+    "bgTo": "#f78a8a",
+    "userPhoto": "https://i.ibb.co/bjGkVLBq/roommate.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Flexible Budget Options",
+    "description": "Search listings tailored to your budget and housing preferences.",
+    "bgFrom": "#f2555d",
+    "bgTo": "#f2b4b4",
+    "userPhoto": "https://i.ibb.co/HTrt3grR/budget-friendly.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Safe & Secure Platform",
+    "description": "All profiles are verified and you can communicate directly through the chat feature.",
+    "bgFrom": "#f2555d",
+    "bgTo": "#f4c2c2",
+    "userPhoto": "https://i.ibb.co/Fk72rHMZ/secure.jpg"
+  }
+]
