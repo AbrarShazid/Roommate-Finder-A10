@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: () => fetch("http://localhost:3000/featured-roommates"),
+        loader: () => fetch("https://roommate-finder-a10-server.vercel.app/featured-roommates"),
         Component: Home,
       },
 
@@ -40,12 +40,12 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/roommate/${params.id}`),
+          fetch(`https://roommate-finder-a10-server.vercel.app/roommate/${params.id}`),
       },
 
       {
         path: "/browse-listings",
-        loader: () => fetch("http://localhost:3000/roommates"),
+        loader: () => fetch("https://roommate-finder-a10-server.vercel.app/roommates"),
         element: <BrowseListings />,
       },
       {
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
         path: "/update/:id",
 
 
-        loader:({params})=>fetch(`http://localhost:3000/update/${params.id}`),
+        loader:({params})=>fetch(`https://roommate-finder-a10-server.vercel.app/update/${params.id}`),
         element:<PrivateRoute>
           <UpdateList></UpdateList>
         </PrivateRoute>

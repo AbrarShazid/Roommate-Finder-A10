@@ -9,7 +9,7 @@ const MyListings = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:3000/myListing?email=${user.email}`)
+      fetch(`https://roommate-finder-a10-server.vercel.app/myListing?email=${user.email}`)
         .then((res) => res.json())
         .then((data) => setMyListings(data));
     }
@@ -28,7 +28,7 @@ const MyListings = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/roommate/${id}`, {
+        fetch(`https://roommate-finder-a10-server.vercel.app/roommate/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

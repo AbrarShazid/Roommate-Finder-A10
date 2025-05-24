@@ -18,7 +18,7 @@ const AddRoommate = () => {
 
     // sending to db
 
-    fetch("http://localhost:3000/roommate", {
+    fetch("https://roommate-finder-a10-server.vercel.app/roommate", {
       method: "POST",
       headers: {
         "content-type": "application/json",

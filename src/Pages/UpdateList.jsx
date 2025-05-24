@@ -17,7 +17,7 @@ const UpdateList = () => {
     updatedRoommate.email = user?.email;
     updatedRoommate.name = user?.displayName;
 
-    fetch(`http://localhost:3000/roommate/${oldData._id}`, {
+    fetch(`https://roommate-finder-a10-server.vercel.app/roommate/${oldData._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

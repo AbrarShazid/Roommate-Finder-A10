@@ -13,7 +13,7 @@ const RoommateDetails = () => {
 const handleLike = () => {
   if ( isOwnPost) return;
 
-  fetch(`http://localhost:3000/roommate/like/${roommate._id}`, {
+  fetch(`https://roommate-finder-a10-server.vercel.app/roommate/like/${roommate._id}`, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ userEmail: user.email }),
