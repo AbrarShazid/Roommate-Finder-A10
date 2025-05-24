@@ -20,6 +20,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        
         loader: () => fetch("https://roommate-finder-a10-server.vercel.app/featured-roommates"),
         Component: Home,
       },
