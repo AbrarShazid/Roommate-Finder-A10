@@ -44,7 +44,7 @@ const Faq = () => {
   };
 
   return (
-    <section className={`py-14 ${darkMode ? "bg-gray-900" : "bg-white"}`}>
+    <section className={`py-14 ${darkMode ? "bg-gray-900" : "bg-[#F5F7FA]"}`}>
       <div className="max-w-4xl mx-auto px-6">
         <h2 className={`text-3xl font-bold mb-8 text-center ${darkMode ? "text-white" : "text-[#f2555d]"}`}>
           Frequently Asked Questions

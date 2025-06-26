@@ -1,13 +1,18 @@
 import React from "react";
 import { Facebook, Instagram, Twitter, Mail, MapPin, Phone } from "lucide-react";
+import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#f2555d] text-white pt-12 pb-6">
+    <footer className="bg-[#f2555d] text-white pt-36 pb-6 ">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
         {/* Brand Info */}
         <div>
-          <h2 className="text-2xl font-bold mb-4">Roommate Finder</h2>
+          <div className="flex  gap-2 ">
+            <img src={logo} alt="Logo" className="w-10 h-10 rounded-full" />
+            <h2 className="text-2xl font-bold mb-4">Roommate Finder</h2>
+
+          </div>
           <p className="text-sm">
             Helping you find the perfect roommate based on your location,
             budget, and lifestyle.
@@ -19,10 +24,10 @@ const Footer = () => {
           <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2 text-sm">
             <li><a href="/" className="hover:underline">Home</a></li>
-            <li><a href="/browse" className="hover:underline">Browse Listings</a></li>
-            <li><a href="/add" className="hover:underline">Add Roommate Post</a></li>
-            <li><a href="/my-listings" className="hover:underline">My Listings</a></li>
-            <li><a href="/login" className="hover:underline">Login / Signup</a></li>
+            <li><a href="/browse-listings" className="hover:underline">All Listings</a></li>
+            <li><a href="/aboutUs" className="hover:underline">About Us</a></li>
+            <li><a href="/contact" className="hover:underline">Contact</a></li>
+            <li><a href="/support" className="hover:underline">Support</a></li>
             <li><a href="/terms" className="hover:underline">Terms & Conditions</a></li>
           </ul>
         </div>

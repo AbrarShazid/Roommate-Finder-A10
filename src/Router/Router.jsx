@@ -12,6 +12,9 @@ import RoommateDetails from "../Pages/RoommateDetails";
 import BrowseListings from "../Pages/BrowseListings";
 import MyListings from "../Pages/MyListings";
 import UpdateList from "../Pages/UpdateList";
+import AboutUs from "../Pages/AboutUs";
+import Contact from "../Pages/Contact";
+import Support from "../Pages/Support";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +51,18 @@ const router = createBrowserRouter([
         path: "/browse-listings",
         loader: () => fetch("https://roommate-finder-a10-server.vercel.app/roommates"),
         element: <BrowseListings />,
+      },
+      {
+        path: "/aboutUs",
+        Component:AboutUs
+      },
+      {
+        path: "/contact",
+        Component:Contact
+      },
+      {
+        path: "/support",
+        Component:Support
       },
       {
         path:"/my-listings",

@@ -13,7 +13,7 @@ const HomeLayOut = () => {
   return (
     <div
       className={`${
-        darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
+        darkMode ? "bg-gray-900 text-white" : "bg-[#F5F7FA] text-black"
       } min-h-screen flex flex-col transition-colors duration-300`}
     >
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />

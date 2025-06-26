@@ -77,7 +77,7 @@ const Review = () => {
         {testimonials.map((t) => (
           <div
             key={t.id}
-            className={darkMode? ` bg-gray-600 text-white rounded-2xl shadow-2xl mx-4 px-6 py-4 min-w-[280px] max-w-[300px] flex flex-col items-center text-center`: `bg-[#fff1f1]  rounded-2xl shadow-md mx-4 px-6 py-4 min-w-[280px] max-w-[300px] flex flex-col items-center text-center`}
+            className={darkMode? ` bg-gray-600 mb-2 shadow-md text-white rounded-2xl  mx-4 px-6 py-4 min-w-[280px] max-w-[300px] flex flex-col items-center text-center`: `bg-[#fff1f1]  rounded-2xl mb-2 shadow-md mx-4 px-6 py-4 min-w-[280px] max-w-[300px] flex flex-col items-center text-center`}
           >
             <img
               src={t.photo}

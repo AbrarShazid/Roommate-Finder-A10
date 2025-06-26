@@ -4,6 +4,8 @@ import Review from "../Components/Extra/Reviews";
 import Faq from "../Components/Extra/Faq";
 import { ThemeContext } from "../provider/ThemeProvider";
 import Featured from "../Components/Featured";
+import HowWorks from "../Components/Extra/HowWorks";
+import NewsLetter from "../Components/Extra/NewsLetter";
 
 const Home = () => {
   const { darkMode } = use(ThemeContext);
@@ -21,11 +23,12 @@ const Home = () => {
         {/* 6 featured card  */}
 
         <Featured></Featured>
-
+        <HowWorks></HowWorks>
 
 
         <Review  />
         <Faq  />
+        <NewsLetter></NewsLetter>
       </div>
     </div>
   );

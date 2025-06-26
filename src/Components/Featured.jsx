@@ -17,7 +17,7 @@ const Featured = () => {
     <div className="max-w-7xl mx-auto px-4 py-12">
       <h2
         className={`text-3xl md:text-4xl font-bold text-center mb-10 ${
-          darkMode ? "text-white" : "text-gray-800"
+          darkMode ? "text-white" : "text-[#f2555d]"
         }`}
       >
         ✨ Featured Roommates
