@@ -45,7 +45,7 @@ const router = createBrowserRouter([
 
       {
         path: "/browse-listings",
-        loader: () => fetch("https://roommate-finder-a10-server.vercel.app/roommates"),
+    
         element: <BrowseListings />,
       },
       {

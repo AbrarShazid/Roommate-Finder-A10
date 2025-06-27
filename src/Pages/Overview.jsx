@@ -21,7 +21,7 @@ const Overview = () => {
   const fetchStats = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("http://localhost:3000/dashboard");
+      const res = await axios.get("https://roommate-finder-a10-server.vercel.app/dashboard");
       setStats(res.data);
      
       setError(null);
