@@ -1,6 +1,6 @@
-# 🏠 RoomMate Finder- Find Your Perfect Roommate
+# 🏠 RoomMate Finder - Find Your Perfect Roommate
 
-**RoomMate Finder** is a full-stack web application designed to help users find compatible roommates based on preferences such as budget, lifestyle, and location. Whether you're moving to a new city or simply looking for someone to share your space, RoomMate Finder makes the process simple, secure, and social.
+**RoomMate Finder** is a full-stack web application built to simplify the process of finding and connecting with potential roommates. Whether you're moving into a new city or looking to share your current space, this platform helps you discover suitable matches based on rent, lifestyle, and location.
 
 ---
 
@@ -12,43 +12,49 @@
 
 ## 🚀 Features
 
-- 🔐 **Secure Authentication**
-  - Email/password registration and login
-  - Google sign-in via Firebase
-  - Protected routes for logged-in users only
-
-- 📋 **Full CRUD Operations**
+- 📋 **Complete Listing Management**
   - Add, update, view, and delete roommate listings
-  - Form validation and user feedback via Toast and SweetAlert2
+  - Form validation and real-time user feedback with Toast and SweetAlert2
 
-- 🎯 **Search & Browse Listings**
-  - Browse all available roommate listings in a clean tabular view
+- 🔎 **Search, Filter & Sort**
+  - Sort listings by rent (low to high or high to low)
+  - Filter listings based on room type (Single, Shared)
+  - Browse listings in a user-friendly card view
 
-- 💡 **Dynamic UI Components**
-  - Like button increases interest count and reveals contact info
-  - Conditional rendering based on user actions and authentication state
+- 📊 **Interactive Dashboard**
+  - View total listings, unique locations, total user etc
+  - Also can update , delete and see  user post from there 
 
-- 🎨 **Responsive, Unique Design**
-  - Mobile, tablet, and desktop-friendly UI with Tailwind CSS
-  - Includes a slider banner, featured listings, and meaningful sections
+- ❤️ **Interest Tracking**
+  - Users can express interest in listings via a Like button
+  - Contact info becomes visible after liking a listing
 
 - 🌗 **Dark/Light Mode**
-  - Toggle between light and dark themes for an enhanced user experience
+  - Toggle between light and dark themes for better visual comfort
 
-- 🎥 **Interactive Animations**
-  - Implemented with Lottie React and React Awesome Reveal
-  - Typing animation with React Simple Typewriter
+- 🎥 **Animated UI Elements**
+  - Smooth animations using Lottie and React Awesome Reveal
+  - Typing effect with React Simple Typewriter
+
+- 🎨 **Responsive Design**
+  - Fully mobile-friendly interface
+  - Built using Tailwind CSS for clean and modern styling
 
 ---
-
 
 ## ⚙️ Technologies Used
 
-- **Frontend**: React, Tailwind CSS, React Router DOM, Lottie, React Hot Toast, SweetAlert2, React Icons, React Typewritter
-- **Backend**: Node.js, Express.js, MongoDB, Firebase Authentication
-- **Hosting**:
-  - Client: Vercel
-  - Server: Vercel
+- **Frontend**:  
+  `React`, `Tailwind CSS`, `React Router DOM`, `React Icons`,  
+  `Lottie React`, `React Hot Toast`, `SweetAlert2`, `React Simple Typewriter`
+
+- **Backend**:  
+  `Node.js`, `Express.js`, `MongoDB`, `Firebase (for auth only if applicable)`
+
+- **Hosting**:  
+  - **Client**: Vercel  
+  - **Server**: Vercel
 
 ---
+
 
