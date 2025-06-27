@@ -68,7 +68,7 @@ const Navbar = () => {
           </span>
         </div>
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex space-x-2 text-base font-medium items-center">
+        <ul className="hidden xl:flex space-x-2 text-base font-medium items-center">
           {navLinks.map(({ to, label }) => (
             <li key={to}>
               <NavLink
@@ -120,6 +120,35 @@ const Navbar = () => {
               </li>
             </>
           )}
+
+          {
+            user?.email && (
+              <li >
+              <NavLink
+                to="/dashboard"
+                className={({ isActive }) =>
+                  `px-4 py-2 rounded-full transition font-semibold focus:outline-none focus:ring-2 focus:ring-white/70 ${
+                    isActive
+                      ? "bg-white text-[#f2555d] shadow"
+                      : "hover:bg-white/20 hover:text-white"
+                  }`
+                }
+                
+              >
+              Dashboard
+              </NavLink>
+            </li>
+
+
+
+
+
+            )
+          }
+
+
+
+
           <li>
             <button
               onClick={toggleDarkMode}
@@ -137,21 +166,22 @@ const Navbar = () => {
                   alt="User"
                   className="w-10 h-10 rounded-full border-2 border-white object-cover shadow"
                 />
-                <span className="hidden xl:inline text-white font-semibold">{user.displayName}</span>
-              </button>
-              <div className="absolute right-0 mt-2 w-40 bg-white text-[#f2555d] rounded shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition pointer-events-auto z-50">
-                <button
+                  <button
                   onClick={handleLogout}
-                  className="block w-full text-left px-4 py-2 hover:bg-[#ffeaea] rounded-b"
+                  className="block w-full text-center px-3 py-1.5 rounded-full hover:bg-white/20 hover:text-white"
                 >
                   Log out
                 </button>
-              </div>
+             
+              </button>
+          
             </li>
           )}
+
+
         </ul>
         {/* Mobile Toggle */}
-        <div className="lg:hidden flex items-center space-x-3">
+        <div className="xl:hidden flex items-center space-x-3">
           <button
             onClick={toggleDarkMode}
             className="bg-white text-[#f2555d] px-2 py-1 text-sm rounded-full font-bold focus:outline-none focus:ring-2 focus:ring-white/70"
@@ -165,12 +195,12 @@ const Navbar = () => {
         </div>
         {/* Mobile Menu Backdrop */}
         {isOpen && (
-          <div className="fixed inset-0 bg-black/40 z-40 lg:hidden animate-fade-in" onClick={toggleMenu} />
+          <div className="fixed inset-0 bg-black/40 z-40 xl:hidden animate-fade-in" onClick={toggleMenu} />
         )}
       </div>
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden fixed top-0 right-0 w-3/4 max-w-xs h-full bg-[#f2555d] text-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`xl:hidden fixed top-0 right-0 w-3/4 max-w-xs h-full bg-[#f2555d] text-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       
@@ -240,6 +270,37 @@ const Navbar = () => {
               </li>
             </>
           )}
+
+{
+            user?.email && (
+              <li >
+              <NavLink
+                to="/dashboard"
+                className={({ isActive }) =>
+                  `block px-4 py-2 rounded-full transition font-semibold focus:outline-none focus:ring-2 focus:ring-white/70 ${
+                    isActive
+                      ? "bg-white text-[#f2555d] shadow"
+                      : "hover:bg-white/20 hover:text-white"
+                  }`
+                }
+                
+              >
+              Dashboard
+              </NavLink>
+            </li>
+
+
+
+
+
+            )
+          }
+
+
+
+
+
+
           <li>
             <button
               onClick={toggleDarkMode}

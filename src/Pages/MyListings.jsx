@@ -49,7 +49,7 @@ const MyListings = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-10">
+    <div className="mx-auto ">
       <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800">
         My Listings
       </h2>

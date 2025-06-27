@@ -16,6 +16,9 @@ import AboutUs from "../Pages/AboutUs";
 import Contact from "../Pages/Contact";
 import Support from "../Pages/Support";
 
+import DashboardLayout from "../Layouts/DashboardLayout"
+import Overview from "../Pages/Overview";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,14 +31,7 @@ const router = createBrowserRouter([
         Component: Home,
       },
 
-      {
-        path: "/add-roommate",
-        element: (
-          <PrivateRoute>
-            <AddRoommate></AddRoommate>
-          </PrivateRoute>
-        ),
-      },
+     
       {
         path: "/roommate/:id",
         element: (
@@ -64,12 +60,7 @@ const router = createBrowserRouter([
         path: "/support",
         Component:Support
       },
-      {
-        path:"/my-listings",
-        element:<PrivateRoute>
-          <MyListings></MyListings>
-        </PrivateRoute>
-      },
+     
 
       { 
         path: "/update/:id",
@@ -100,6 +91,41 @@ const router = createBrowserRouter([
       },
     ],
   },
+{
+  path:'/dashboard',
+  Component:DashboardLayout,
+
+  children:[
+
+    {
+      index:true,
+      Component:Overview
+    },
+    {
+      path: "/dashboard/add-roommate",
+      element: (
+        <PrivateRoute>
+          <AddRoommate></AddRoommate>
+        </PrivateRoute>
+      ),
+    },
+
+    {
+      path:"/dashboard/my-listings",
+      element:<PrivateRoute>
+        <MyListings></MyListings>
+      </PrivateRoute>
+    },
+
+
+
+
+  ]
+
+},
+
+
+
   {
     path: "*",
     Component: Error,

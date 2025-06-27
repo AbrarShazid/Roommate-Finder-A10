@@ -10,9 +10,14 @@ const AddRoommate = () => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
-    const newRoommate = Object.fromEntries(formData.entries());
-    newRoommate.lifestyle = formData.getAll("lifestyle");
-     newRoommate.email = user?.email
+    const rentValue = Number(formData.get("rent"));
+
+    const newRoommate = {
+      ...Object.fromEntries(formData.entries()),
+      lifestyle: formData.getAll("lifestyle"),
+      email: user?.email,
+      rent: rentValue  
+    };
 
 
     // sending to db
@@ -41,8 +46,8 @@ const AddRoommate = () => {
   const roomTypes = ["Single", "Shared"];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+    <div className="min-h-screen ">
+      <div className=" mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
         <div className="bg-[#f2555d] py-4 px-6">
           <h2 className="text-2xl font-bold text-white">
             Add Roommate Listing

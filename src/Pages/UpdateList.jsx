@@ -10,9 +10,12 @@ const UpdateList = () => {
 
   const handleUpdate = (e) => {
     e.preventDefault();
+    console.log("Form submitted"); 
     const form = e.target;
     const formData = new FormData(form);
     const updatedRoommate = Object.fromEntries(formData.entries());
+    const rentValue = Number(formData.get("rent"));
+    updatedRoommate.rent = rentValue;
     updatedRoommate.lifestyle = formData.getAll("lifestyle");
     updatedRoommate.email = user?.email;
     updatedRoommate.name = user?.displayName;

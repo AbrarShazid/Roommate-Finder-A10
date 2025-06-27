@@ -1,10 +1,15 @@
 import React from "react";
 import { Facebook, Instagram, Twitter, Mail, MapPin, Phone } from "lucide-react";
 import logo from "../assets/logo.png";
+import { useLocation } from "react-router";
 
 const Footer = () => {
+  const location = useLocation();
+
+  const isHome = location.pathname === "/";
+  
   return (
-    <footer className="bg-[#f2555d] text-white pt-36 pb-6 ">
+    <footer className={`bg-[#f2555d] text-white ${isHome ? 'pt-36' : 'pt-12'} pb-6 `}>
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
         {/* Brand Info */}
         <div>

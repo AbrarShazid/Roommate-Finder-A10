@@ -15,7 +15,7 @@ const NewsLetter = () => {
       <input
         type="email"
         placeholder="Enter your email"
-        className="w-full sm:w-auto px-4 py-2 rounded-full text-black focus:outline-none ring-2 ring-white"
+        className="w-full sm:w-auto px-4 py-2 rounded-full text-black placeholder:text-black focus:outline-none ring-2 ring-white"
         required
       />
       <button
